@@ -60,7 +60,7 @@ void loop() {
 
       // Trigger motor if within 50 cm
       if (measure.RangeMilliMeter <= 500) {
-        analogWrite(motorPins[i], 255); // Full vibration intensity
+        analogWrite(motorPins[i], 255*(10/measure.RangeMilliMeter); // Full vibration intensity 
       } else {
         analogWrite(motorPins[i], 0); // Turn off motor
       }
